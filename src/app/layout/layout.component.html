@@ -5,8 +5,9 @@
 
 <!-- sidenav container -->
 <mat-sidenav-container style="padding-top: 64px; height:calc(100vh-64px)">
-  <mat-sidenav style="background-color: rgb(96, 102, 99);" #sideNav (opened)="opened()" (closed)="closed()" mode="push"
-    opened="true">
+  <mat-sidenav style="background-color: rgb(96, 102, 99);"
+  (closedStart)="closeSidenav()" (openedStart)="openSidenav()"  (opened)="opened()" (closed)="closed()" mode="push"
+  [opened]="sidenavOpen$ | async">
     我是左邊選單
   </mat-sidenav>
 
@@ -18,5 +19,5 @@
 </mat-sidenav-container>
 
 <ng-template #toolbar>
-  <app-toolbar></app-toolbar>
+  <app-toolbar (openSidenav)="openSidenav()"></app-toolbar>
 </ng-template>
