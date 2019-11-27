@@ -22,11 +22,6 @@ export class LayoutComponent implements OnInit {
     console.log('芝麻關門');
   }
 
-  toggleSideNav(sideNav: MatSidenav) {
-    sideNav.toggle().then((result: MatDrawerToggleResult) => {
-      console.log(result);
-      console.log(`選單狀態：${result}`);
-    });
-  }
+
 
 }
