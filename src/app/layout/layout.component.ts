@@ -10,6 +10,7 @@ import { SidenavService } from '../sidenav/sidenav.service';
 export class LayoutComponent implements OnInit {
 
   sidenavOpen$ = this.sidenavService.open$;
+  sidenavMode$ = this.sidenavService.sidenavMode$;
   constructor(private sidenavService: SidenavService) { }
 
   ngOnInit() {
