@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
-import { MatSidenavModule, MatButtonModule } from '@angular/material';
+import { MatSidenavModule, MatButtonModule, MatToolbarModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
+import { ToolbarModule } from '../toolbar/toolbar.module';
+import { MaterialModule } from 'src/@happy/shared/material-components.module';
 
 
 
@@ -10,9 +12,9 @@ import { RouterModule } from '@angular/router';
   declarations: [LayoutComponent],
   imports: [
     CommonModule,
-    MatSidenavModule,
-    MatButtonModule,
-    RouterModule
+    ToolbarModule,
+    RouterModule,
+    MaterialModule
   ]
 })
 export class LayoutModule { }
