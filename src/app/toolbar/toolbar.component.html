@@ -1,5 +1,6 @@
 <mat-toolbar class="toolbar-fixed">
   <div class="toolbar-container">
+    <app-toolbar-sidenav-mobile-toggle (mobileOpenSidenav)="openSidenav.emit()"></app-toolbar-sidenav-mobile-toggle>
     <div style="display: flex; justify-content: center;">
       <mat-icon>flight_takeoff</mat-icon>
       <div class="title">Flight</div>
