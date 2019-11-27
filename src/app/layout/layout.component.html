@@ -1,16 +1,22 @@
-<mat-sidenav-container>
-  <mat-sidenav style="background-color: burlywood;" #sideNav fixedInViewport="true" (opened)="opened()"
-    (closed)="closed()" mode="side" opened="true">
+<!-- toolbar -->
+<ng-container>
+  <ng-container *ngTemplateOutlet="toolbar"></ng-container>
+</ng-container>
+
+<!-- sidenav container -->
+<mat-sidenav-container style="padding-top: 64px; height:calc(100vh-64px)">
+  <mat-sidenav style="background-color: rgb(96, 102, 99);" #sideNav (opened)="opened()" (closed)="closed()" mode="push"
+    opened="true">
     我是左邊選單
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <button mat-raised-button (click)="toggleSideNav(sideNav)">切換選單狀態</button>
-
-    <mat-drawer-container style="height:100px;margin:10px;border: 1px solid black">
-      <mat-drawer mode="side" opened="true">Drawer Side</mat-drawer>
-      <mat-drawer-content>Content</mat-drawer-content>
-    </mat-drawer-container>
-    <router-outlet></router-outlet>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<ng-template #toolbar>
+  <app-toolbar></app-toolbar>
+</ng-template>
