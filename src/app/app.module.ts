@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
+import { SidenavModule } from './sidenav/sidenav.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,6 +15,7 @@ import { LayoutModule } from './layout/layout.module';
     LayoutModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SidenavModule,
 
   ],
   providers: [],

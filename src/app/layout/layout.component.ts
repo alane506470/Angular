@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSidenav, MatDrawerToggleResult } from '@angular/material';
+import { SidenavService } from '../sidenav/sidenav.service';
 
 @Component({
   selector: 'app-layout',
@@ -8,7 +9,8 @@ import { MatSidenav, MatDrawerToggleResult } from '@angular/material';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  sidenavOpen$ = this.sidenavService.open$;
+  constructor(private sidenavService: SidenavService) { }
 
   ngOnInit() {
   }
@@ -22,6 +24,12 @@ export class LayoutComponent implements OnInit {
     console.log('芝麻關門');
   }
 
+  openSidenav() {
+    console.log('打開side');
+    this.sidenavService.openSide();
+  }
 
-
+  closeSidenav() {
+    this.sidenavService.closeSide();
+  }
 }
