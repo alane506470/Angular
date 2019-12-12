@@ -1,0 +1,27 @@
+@import "../styles/var";
+.sidenav-toolbar {
+  padding: 0 $spacing/1.333 0 $spacing;
+  height: $sidenav-toolbar-height;
+  min-height: $sidenav-toolbar-height;
+  max-height: $sidenav-toolbar-height;
+  overflow: hidden;
+
+  .sidenav-toolbar-icon {
+    vertical-align: text-top;
+
+    svg {
+      width: 26px;
+    }
+  }
+
+  .sidenav-toolbar-logo {
+    outline: none;
+    margin-left: $sidenav-item-padding-left;
+    margin-bottom: -5px;
+
+    svg {
+      height: 30px;
+      width: 60px;
+    }
+  }
+}

@@ -1,1 +1,12 @@
-<p>sidenav works!</p>
+<div class="sidenav-toolbar" fxLayout="row" fxLayoutAlign="start center">
+  <div class="sidenav-toolbar-icon">
+    <img fxHide.gt-lg fxHide.xs style="height: 35px;" src="assets/image/planet-earth.png">
+  </div>
+  <div [routerLink]="['/']" class="sidenav-toolbar-logo" routerLinkActive="router-link-active" >
+    AlanWeb
+  </div>
+  <span fxFlex><!-- fill space --></span>
+</div>
+
+<app-sidenav-item *ngFor="let item of items$ | async" [item]="item" [level]="0"></app-sidenav-item>
+

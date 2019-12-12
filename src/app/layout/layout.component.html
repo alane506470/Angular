@@ -7,9 +7,8 @@
 <mat-sidenav-container style="padding-top: 64px; height:calc(100vh-64px)">
   <mat-sidenav style="background-color: rgb(96, 102, 99); padding-top: 64px;" (closedStart)="closeSidenav()"
     (openedStart)="openSidenav()" [mode]="sidenavMode$ | async" [opened]="sidenavOpen$ | async">
-    <div style="color: black;">
-      我是左邊選單{{sidenavMode$ | async}}
-    </div>
+      <app-sidenav>
+      </app-sidenav>
   </mat-sidenav>
 
   <mat-sidenav-content>
