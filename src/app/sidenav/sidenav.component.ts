@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { SidenavItem } from './sidenav-item.interface';
+import { SidenavService } from './sidenav.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  items$: Observable<SidenavItem[]>;
+
+  constructor(private sidenavService: SidenavService) { }
 
   ngOnInit() {
+    this.items$ = this.sidenavService.items$;
   }
 
 }

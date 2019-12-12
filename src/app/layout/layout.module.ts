@@ -5,6 +5,7 @@ import { MatSidenavModule, MatButtonModule, MatToolbarModule } from '@angular/ma
 import { RouterModule } from '@angular/router';
 import { ToolbarModule } from '../toolbar/toolbar.module';
 import { MaterialModule } from 'src/@happy/shared/material-components.module';
+import { SidenavModule } from '../sidenav/sidenav.module';
 
 
 
@@ -14,7 +15,8 @@ import { MaterialModule } from 'src/@happy/shared/material-components.module';
     CommonModule,
     ToolbarModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    SidenavModule
   ]
 })
 export class LayoutModule { }
